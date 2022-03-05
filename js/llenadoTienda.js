@@ -12,12 +12,43 @@ let productos =[
     {foto:'img/producto89.jpg', nombre: "Camiseta demos slayer", precio: 40000, descripcion: "Camiseta blanca, edicion final"},
     {foto:'img/producto10.jpg', nombre: "Pintura lienzo Edition ", precio: 200000, descripcion: "Cuadro 40x60 edtion, pared"},
 ]
+
+
+// Creo la referencia al componente padre.
+// creo una variable para almacenar la base sobre la cual voy a pintar
+let fila=document.getElementById("fila")
+
 //Recorriendo un arreglo con JS(buscar,seleccionar)
 productos.forEach(function(producto){
-    console.log("Programando desde Js")
+    console.log(producto.nombre)
+    console.log(producto.precio)
+    console.log(producto.foto)
+    console.log(producto.descripcion)
+
+    //Receta para pintar con JS
+    //1.Comience a crear la estructura que necesite
+
+    //creo columna
+    let columna=document.createElement("div")
+    columna.classList.add("col")
+
+    //creo la tarjeta
+    let tarjeta=document.createElement("div")
+    tarjeta.classList.add("card")
+    tarjeta.classList.add("h-100")
+
+    // Creo imagen
+    let foto=document.createElement("img")
+    foto.classList.add("card-img-top")
+    foto.src=producto.foto
+
+    //2. Ordenar la estructura (jerarquia Fila_Col-tarjeta-img)
+    tarjeta.appendChild(foto)
+    columna.appendChild(tarjeta)
+    fila.appendChild(columna)
 })
 
-// escuchando clic en el boton
+/* escuchando clic en el boton
 let boton=document.getElementById("boton") 
 
 //detectando el primer evento 
@@ -28,5 +59,4 @@ function cambiarFoto(){
     let foto=document.getElementById("fotoPrueba")
     foto.src="img/img4.png"
 }
-
-//
+*/
