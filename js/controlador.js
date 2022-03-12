@@ -3,7 +3,7 @@
 /*
 Comentario de bloque
 */
-
+/*
 //variables
 let nombreUsuario = "Andres"
 let estaturaUsuario = 1.81
@@ -14,9 +14,9 @@ let espaisa = true //(banderas)
 const APELLIDOS_USUARIO = "Agudelo Pino"
 
 // Unir los mensajes con las variables (Concatenar)
-/*console.log("Buenas Tardes "+nombreUsuario+ "su edad es "+edadUsuario)
+console.log("Buenas Tardes "+nombreUsuario+ "su edad es "+edadUsuario)
 
-console.log(`Buenas tardes ${nombreUsuario} su edad es ${edadUsuario}`)*/
+console.log(`Buenas tardes ${nombreUsuario} su edad es ${edadUsuario}`)
 
 //Utilizando el DOM (Document objet model)
 let etiquetaTitulo=document.getElementById("titulo")
@@ -39,3 +39,22 @@ etiquetaFotoDemon.src="img/img1.jpg"
 
 //salidas
 // console.log(nombreUsuario);
+*/
+
+// IMPORTAR MODULOS
+import { pintarTienda } from "./llenadoTienda.js";
+import{ampliarInformacion} from "./ampliarInfo.js";
+
+
+// LLamando al modulo de pintar
+pintarTienda()
+
+//Llamando al modulo ampliar info
+let contenedorTienda=document.getElementById("fila")
+contenedorTienda.addEventListener("click",function(event){
+
+    let modalInfoProducto = new bootstrap.Modal(document.getElementById('modalInfoProduct'))
+    ampliarInformacion(event)
+    modalInfoProducto.show()
+
+}) //Crear un evento
