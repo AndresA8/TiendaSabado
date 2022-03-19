@@ -2,16 +2,16 @@
 export function pintarTienda(){
     // arreglo de objetos
     let productos =[
-        {foto:'img/tienda1.jpg', nombre: "Termo UA", precio: 70000, descripcion: "Termo agua, mango de agarre antideslizante"},
-        {foto:'img/tienda2.jpg', nombre: "Tapabocas", precio: 120000, descripcion: "Tapabocas antifluido UA"},
-        {foto:'img/tienda3.jpg', nombre: "Morral UA", precio: 280000, descripcion: "Morral edicion limitada, tela impermeable"},
-        {foto:'img/tienda4.jpg', nombre: "Gorra", precio: 100000, descripcion: "Gorra, color gris, tela impermeable"},
-        {foto:'img/tienda5.jpg', nombre: "Pantaloneta", precio: 80000, descripcion: "Pantaloneta corta, tela antifluidos"},
-        {foto:'img/tienda6.jpg', nombre: "Audifonos JBL UA", precio: 350000, descripcion: "JBL UA edition limitada"},
-        {foto:'img/tienda7.jpg', nombre: "Gorro UA", precio: 50000, descripcion: "Gorro pasamontañismo, doble faz"},
-        {foto:'img/tienda8.jpg', nombre: "Camisa UA", precio: 80000, descripcion: "Camisa antifluidos"},
-        {foto:'img/tienda9.jpg', nombre: "Tennis Under Armour", precio: 400000, descripcion: "Tennis UA edition basket "},
-        {foto:'img/tienda10.jpg', nombre: "leggins hombre UA", precio: 110000, descripcion: "Licra deportiva hombre talla unica"},
+        {foto:'img/producto1.jpg', nombre: "Burger Argentina", precio: 19000,  descripcion: "Pan artesano, carne artesanal 180 grs, chorizo, chimichurri de la casa, queso mozzrella, lechuga, tomate y cebolla"},
+        {foto:'img/producto6.jpg', nombre: "Burger Cheddar", precio: 19000, descripcion: "Pan artesano, carne artesanal 180 grs, tocineta, Quesso cheddar, Quesso mozzarella, lechuga, tomate y cebolla caramelizada"},
+        {foto:'img/producto3.jpg', nombre: "Churrasco", precio: 25000, descripcion: "Churrasco 250 grs, acompañado de papas rusticas o francesas"},
+        {foto:'img/producto7.jpg', nombre: "Picada x2", precio: 32000, descripcion: "Carnes, chorizo, arepa, ensalada"},
+        {foto:'img/producto4.jpg', nombre: "Papas Mexicanas", precio: 18000, descripcion: "Papas,carne desmechada, pico de gallo, quesso mozzarella, maiz tierno, sour cream y guacamole"},
+        {foto:'img/producto2.jpg', nombre: "Punta de Anca", precio: 23000, descripcion: "Punta de Anca 250 grs, papas rustica o francesas"},
+        {foto:'img/producto5.jpg', nombre: "Papas Argentinas", precio: 18000, descripcion: "Papas, carne de res, chorizo, quesso mozzarella, huevos de codorniz y chimichurri artesanal"},
+        {foto:'img/producto8.jpg', nombre: "Papas Paisas", precio: 17500, descripcion: "Papas, chicharron, chorizo, cubos de platano, huevos de codorniz"},
+        {foto:'img/producto9.jpg', nombre: "Costillas BBQ", precio: 22000, descripcion: "Costillas cerdo 400 grs, papas rusticas o francesas"},
+        {foto:'img/producto10.jpg', nombre: "Cañon Cerdo", precio: 23000, descripcion: "Cañon de cerdo 250 grs papas rusticas o francesas"},
     ]
     
     
@@ -40,7 +40,7 @@ export function pintarTienda(){
     
         // Creo imagen
         let foto=document.createElement("img")
-        foto.classList.add("card-img-top")
+        foto.classList.add("card-img-top","foto")
         foto.src=producto.foto
     
         //Creo el nombre
@@ -51,12 +51,18 @@ export function pintarTienda(){
         //Creo el precio
         let precio=document.createElement("h3")
         precio.innerHTML= "$ " + producto.precio
-        precio.classList.add("precio")
+        precio.classList.add("precio","mt-2")
+
+        // Creo la descripcion
+        let descripcion=document.createElement("p")
+        descripcion.innerHTML=producto.descripcion
+        descripcion.classList.add("text-center")
+        descripcion.hidden=true
     
         //Creo un boton
         let boton=document.createElement("button")
         boton.setAttribute("type","button")
-        boton.classList.add("btn","btn-warning","mx-4")
+        boton.classList.add("btn","btn-warning","mx-4","mb-5")
         boton.textContent="Ver producto"
         
     
@@ -67,6 +73,8 @@ export function pintarTienda(){
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(precio)
         tarjeta.appendChild(boton)
+        tarjeta.appendChild(descripcion)
+        
        
     
        

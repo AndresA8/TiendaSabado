@@ -1,5 +1,5 @@
 .fondomovil{
-    background-image: url("img/img3.jpg");
+    background-image: url("img/chef.jpg");
     background-attachment: fixed;
     height: 450px;
     
@@ -15,3 +15,10 @@ li{
 a{
     color: black;
 }
+h3{
+    text-align: center;
+}
+.body{
+    background-color:rgb(24, 23, 23);
+}
+

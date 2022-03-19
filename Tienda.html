@@ -4,48 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>A FUEGO COCINA GOURMET</title>
+    <link rel="icon" type="image/jpg" href="img/logo.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="Tienda.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__backInLeft">
-            <div class="container-fluid">
-              <a class="navbar-brand" id="menu" href="#">UNDER ARMOUR</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Tienda
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="Tienda.html">Productos</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__backInLeft">
+        <div class="container-fluid">
+          <a class="navbar-brand" id="menu" href="index.html">A FUEGO GOURMET</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Tienda.html">Parrilla</a></li>
+                  <li><a class="dropdown-item" href="Tienda.html">Hamburguesas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Tienda.html">Bebidas</a></li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>     
+              </li>
+              </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>         
     </header>
     <main>
         <section>
@@ -53,30 +51,26 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" >Compra UA</h5>
+                      <h5 class="modal-title" >ORDENA AQUI</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="container">
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-6">
                                     <img src="" alt="" class="img-fluid w-100" id="fotoinfo">
-
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="text-center" id="nombreinfo"></h3>
-
-                                </div>
-                                <div class="col-4">
+                                    <h3 class="text-center" id="nombreinfo"></h3>                            
                                     <h4 class="text-center" id="precioinfo"></h4>
-
-                                </div
-                            </div>
+                              </div>
+                                <div class="col-6">
+                                  <p class="text-center" id="desinfo" ></p>
+                              </div>
+                            </div> 
                         </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-secondary">Añadir al carrito</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-success">Añadir al carrito</button>
                     </div>
                   </div>
                 </div>
@@ -91,9 +85,48 @@
 
         </div>
     </main>
-    <footer>
+    <br>
+    <br>
+    <footer class="footer container-fluid bg-secondary bg-gradient p-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="footer0 col-3 mt-5 mb-5">
+            <img src="img/logo.jpg" alt="" width="150">
+            
+          </div>
+          <div class="footer1 col-3 mt-5 mb-5" id="footer">
+            <h3> <b>Contactanos </b></h3>
+            <ul>
+              <li><a href="https://api.whatsapp.com/send/?phone=573117607723&text&app_absent=0" target="_blank">+57 3117607723</a></li>
+              <li><a href="">afuegococinagourmet@gmail.com</a></li>
+              <li><a href="https://www.google.com/maps/dir/6.2379578,-75.5626034/al+fuego+gourmet+rionegro+antioquia/@6.2357617,-75.6140888,11z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8e469f71dbc96321:0xdff4eb5774eeeb00!2m2!1d-75.3706741!2d6.1576363" target="_blank">Ubicacion</a></li>
+              <li>Medellin, Colombia</li>
+            </ul>
+          </div>
+          <div class="footer2 col-3 mt-5 mb-5">
+            <h3> <b>Fuego Gourmet</b></h3>
+            <ul>
+              <li><a href="">Quienes somos</a></li>
+              <li><a href="index.html">A fuego gourmet</a></li>
+              <li><a href="https://www.instagram.com/esteban_galvisb/" target="_blank">Chef</a></li>
+            </ul>
+          </div>
+          <div class="footer3 col-3 mt-5 mb-5">
+            <h3> <b>Redes </b></h3>
+            <ul>
+              <li><a href="#"></a><i class="fab fa-facebook"></i></li>
+              <li><a href="#"></a><i class="fab fa-twitter"></i></li>
+              <li><a href="https://www.instagram.com/afuego.cocinagourmet/" target="_blank"></a><i class="fab fa-instagram"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="text-center">copyright &copy;2020 A Fuego Gourmet. Andres Agudelo. Todos los derechos reservados</p>
 
+        </div>
+      </div>
     </footer>
+    <script src="https://kit.fontawesome.com/bdbed0aafa.js" crossorigin="anonymous"></script>
     <script src="js/controlador.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
