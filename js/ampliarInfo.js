@@ -12,17 +12,22 @@ export function ampliarInformacion(event){
             
             
         }
-        console.log(producto)
+        //console.log(producto)
 
         //Asociando los valores respectivos al modal
         let foto=document.getElementById("fotoinfo")
         foto.src=producto.foto
+
         let nombre=document.getElementById("nombreinfo")
         nombre.textContent=producto.nombre
+
         let precio=document.getElementById("precioinfo")
         precio.textContent=producto.precio
+
         let descripcion=document.getElementById("desinfo")
         descripcion.textContent=producto.descripcion
+
+        return producto
        
     }
 }

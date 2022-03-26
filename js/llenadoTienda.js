@@ -21,7 +21,7 @@ export function pintarTienda(){
     
     //Recorriendo un arreglo con JS(buscar,seleccionar)
     productos.forEach(function(producto){
-       /* console.log(producto.nombre)
+       /*console.log(producto.nombre)
         console.log(producto.precio)
         console.log(producto.foto)
         console.log(producto.descripcion)*/

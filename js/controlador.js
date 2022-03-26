@@ -45,6 +45,8 @@ etiquetaFotoDemon.src="img/img1.jpg"
 import { pintarTienda } from "./llenadoTienda.js";
 import{ampliarInformacion} from "./ampliarInfo.js";
 
+//crear un objeto vacio 
+let producto={}
 
 // LLamando al modulo de pintar
 pintarTienda()
@@ -54,7 +56,55 @@ let contenedorTienda=document.getElementById("fila")
 contenedorTienda.addEventListener("click",function(event){
 
     let modalInfoProducto = new bootstrap.Modal(document.getElementById('modalInfoProduct'))
-    ampliarInformacion(event)
+    //cargar informacion del producto dentro del modal
+    producto=ampliarInformacion(event) //Crear un evento
+    console.log(producto)
+    if(event.target.classList.contains("btn")){
     modalInfoProducto.show()
+    }
+}) 
 
-}) //Crear un evento
+//dectetar la accion para añadir al carrito
+
+//carito es un arreglo de productos(arreglo de objetos)
+
+let carrito=[]
+
+let boton = document.getElementById("botonAdd")
+boton.addEventListener("click",function(event){
+    
+
+    //1. Capturar la cantidad del producto
+    let cantidad=document.getElementById("cantidadProducto").value // el value solo se le pone a los input, para capturar lo que escribo
+    
+
+    //2. Agrego la cantidad al objeto producto
+    producto.cantidad=cantidad
+
+   
+    //3. Agregar el producto al carrito
+    carrito.push(producto) // para sumar datos dentro de un arreglo 
+    console.log(carrito)
+
+    //4. Calculo la sumatoria de cantidades
+    let suma=0
+
+    carrito.forEach(function(producto){  
+        //console.log(producto.cantidad)
+        suma=suma+Number(producto.cantidad) //convertir string a numerico
+
+    })
+
+    //console.log(suma)
+    let capsula=document.getElementById("capsula")
+    capsula.textContent=suma // text content modifica el texto 
+    capsula.classList.remove("invisible") //quitar 
+})
+
+let limpiarCarrito = document.getElementById("limpiar")
+limpiarCarrito.addEventListener("click",function(evento){
+    carrito=[]
+    let capsula=document.getElementById("capsula")
+    capsula.textContent=0
+    capsula.classList.add("invisible")
+})
