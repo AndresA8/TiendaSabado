@@ -25,3 +25,12 @@ h3{
     font-size: 40px;
     
 }
+.modal-car-total{
+    color: gray;
+    font-size: 20px;
+}
+
+.totalneto {
+    font-size: 20px;
+    color: green;
+}

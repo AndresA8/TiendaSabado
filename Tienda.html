@@ -28,7 +28,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Menu
+                  Tienda
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="Tienda.html">Parrilla</a></li>
@@ -40,7 +40,7 @@
               </ul>
               <ul class="navbar-nav me-2 mb-2 mb-1 lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="">
+                  <a class="nav-link active" aria-current="page" href="#" id="botoncarrito">
                   <i class="bi bi-cart4 icono"></i>
                   <span id= "capsula" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
                     99+
@@ -78,21 +78,58 @@
                                   <p class="text-center" id="desinfo" ></p>
                                   <div class="mb-3">
                                     <label for="cantidad" class="form-label">Cantidad</label>
-                                    <input type="number" class="form-control" id="cantidadProducto">
+                                    <input type="number" class="form-control" id="cantidadProducto" 
+                                    oninput="this.value = Math.max(this.value, 1)" min="1" value="1">
                                   </di>
                               </div>
                             </div> 
                         </div>
                     </div>
                     <div class="modal-footer">
+                      
                       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                      <button id=limpiar type="button" class="btn btn-primary">Limpiar</button>
-                      <button id=botonAdd type="button" class="btn btn-success">Añadir al carrito</button>
+                      <button id=añadirCar type="button" class="btn btn-success">Añadir al carrito</button>
                       
                     </div>
                   </div>
                 </div>
               </div>
+        </section>
+
+        <section>
+          <!-- Modal -->
+<div class="modal fade" id="resumenCarrito" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Store a fuego gourmet </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container" id="contenedorventa">
+
+
+        </div>
+      </div>
+      <div class="d-sm-flex" >
+        <p class="modal-car-total" >TOTAL A PAGAR COP$:</p>
+        <label id="totalNeto" class="totalneto"></label>
+      </div>
+      <div class="d-sm-flex">
+        <p class="modal-car-total"> TOTAL A PAGAR USD$:</p>
+        <label id="totalusd" class="totalneto"></label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button id="Eliminar" type="button" class="btn btn-primary">Limpiar</button>
+        <button id="convertir" type="button" class="btn btn-secondary">USD</button>
+        <button type="button" class="btn btn-success">Comprar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+          
         </section>
 
         <div class="container">
